@@ -1,0 +1,38 @@
+.nav.d-flex.align-vertical.top-index ontouchstart=""
+  = link_to(:root) do
+    = image_tag("logo/prevail_full_logo_black_tm.svg", class: "nav-logo", alt:"Prevail Legal Logo")
+  .navbar
+    .menu-icon onClick="toggleMobileNavbar()"
+    .menu.nav-links.d-flex.align-center
+      = link_to(:Home, root_path, class: "nav-link desktop-hide")
+      = link_to(:About, about_us_path, class: "nav-link")
+      = link_to(:Solutions, solutions_path, class: "nav-link")
+
+      .resources-menu.d-flex-desktop
+        .resources-item.cursor-pointer
+          = "Resources"
+          ul.dropdown-menu.position-absolute.medium-bold
+            = link_to("https://medium.com/@prevail-legal", target: :_blank, rel: "noopener") do
+              li = "Our Blog"
+            = link_to(:press, rel: "noopener") do
+              li = "Press"
+            = link_to("https://jobs.lever.co/prevail", target: :_blank, rel: "noopener") do
+              li = "Careers"
+            = link_to(:newsletter, rel: "noopener") do
+              li = "Newsletter"
+        .resources-item.cursor-pointer
+          = "Support"
+          ul.dropdown-menu.position-absolute.medium-bold
+            = link_to("https://help.prevail.io", rel: "noopener", target: :_blank) do
+              li = "Help"
+            = link_to(:privacy, rel: "noopener", target: :_blank) do
+              li = "Privacy"
+            = link_to(:contact, rel: "noopener", target: :_blank) do
+              li = "Contact Us"
+      .mx-auto
+        - if user_signed_in?
+          = link_to("Log Out", destroy_user_session_path, class: "nav-link button ghost-blue mid-large")
+          = link_to("Dashboard", dashboard_path, {class: "button blue-gradient mid-large request-demo"})
+        - else
+          = link_to("Get a Demo", "#schedule", onclick: "showCalendly('demo')", class: "request-demo-btn nav-link button ghost-blue medium")
+          = link_to("Login", new_session_path(resource_name), class: "button blue-gradient large request-demo")
