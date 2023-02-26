@@ -1,0 +1,241 @@
+.switch {
+  height: 17px;
+  position: relative;
+  width: 30px;
+
+  &.move {
+    left: 0.5rem;
+    top: 0.8rem;
+  }
+
+  input[type="checkbox"] {
+    height: 0;
+    opacity: 0;
+    width: 0;
+  }
+}
+
+.slider {
+  border: 1px solid transparent;
+  border-radius: 34px;
+  cursor: pointer;
+  height: 17px;
+  position: absolute;
+  transition: 0.4s;
+  width: 30px;
+
+  &::before {
+    background-color: $white;
+    border-radius: 50%;
+    bottom: 1px;
+    content: "";
+    height: 13px;
+    left: 1px;
+    position: absolute;
+    transition: 0.4s;
+    width: 13px;
+  }
+
+  &.blue,
+  &.prevail-blue {
+    background-color: $input-grey;
+  }
+
+  &.transparent {
+    background-color: transparent;
+  }
+
+  &.dark-transparent {
+    background-color: transparent;
+    border: 1px solid $dark-elevation;
+
+    &::before {
+      background-color: $off-white;
+    }
+  }
+}
+
+input:checked + .slider {
+  &.blue {
+    background-color: $prevail-blue-500;
+  } // TODO, replace all slider.blue with slider.prevail-blue so that we can delete this .blue selector
+
+  &.prevail-blue {
+    background-color: $prevail-blue-500;
+  }
+
+  &.yellow {
+    background-color: $prevail-sunglow-400;
+  }
+}
+
+input:focus + .slider {
+  &.blue {
+    box-shadow: 0 0 1px $prevail-blue-500;
+  }
+  &.yellow {
+    box-shadow: 0 0 1px $prevail-sunglow-400;
+  }
+}
+
+input:checked + .slider::before {
+  transform: translateX(13px);
+}
+
+.checkbox-container {
+  padding-left: 2rem;
+
+  .checkmark {
+    background-color: $lightest-grey;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 20px;
+
+    &::after {
+      border: solid $black-grey;
+      border-width: 0 3px 3px 0;
+      content: "";
+      display: none;
+      height: 10px;
+      inset: 4px 0 0 8px;
+      position: absolute;
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      width: 6px;
+    }
+  }
+
+  input {
+    cursor: pointer;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    width: 0;
+
+    &:checked ~ .checkmark::after {
+      display: block;
+    }
+  }
+}
+
+.background-blur-amount-slider {
+  $number-of-options: 4;
+  align-content: stretch;
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  max-width: 500px;
+  position: relative;
+
+  &::before {
+    background: $prevail-blue-500;
+    content: "";
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% * (#{$number-of-options - 1} / #{$number-of-options}));
+  }
+
+  input,
+  label {
+    cursor: pointer;
+    flex: 1;
+  }
+
+  input {
+    display: none;
+  }
+
+  label {
+    display: inline-block;
+    height: 100%;
+    position: relative;
+    width: 20%;
+
+    &::before,
+    &::after {
+      left: 50%;
+      position: absolute;
+      transition: all 0.15s ease-in-out;
+    }
+
+    &::before {
+      content: attr(data-background-blur-amount);
+      font-size: 13px;
+      letter-spacing: 0.4px;
+      opacity: 0.85;
+      padding-top: 10px;
+      transform: translate(-50%, 45px);
+      white-space: nowrap;
+    }
+
+    &::after {
+      background: $white;
+      border: 2px solid $prevail-blue-500;
+      border-radius: 50%;
+      content: "";
+      height: 30px;
+      pointer-events: none;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 30px;
+      z-index: 1;
+    }
+
+    &:hover::after {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+  }
+
+  input:checked {
+    @for $i from 1 through $number-of-options {
+      &:nth-child(#{$i * 2 - 1}) ~ .background-blur-amount-pos {
+        left: #{($i * 20%) - 10%};
+      }
+    }
+    display: none;
+
+    + label::before {
+      font-weight: 800;
+      opacity: 1;
+    }
+
+    + label::after {
+      border-width: 7px;
+      // transform: translate(-50%, -50%) scale(0.75);
+    }
+
+    ~ .background-blur-amount-pos {
+      opacity: 1;
+    }
+  }
+
+  .background-blur-amount-pos {
+    background: $prevail-blue-500;
+    border-radius: 50%;
+    height: 12px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease-in-out;
+    width: 12px;
+    z-index: 2;
+  }
+
+  button {
+    appearance: none;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 56px auto 0;
+    outline: 0;
+    padding: 10px 20px;
+    position: relative;
+    transition: all 0.15s ease-in-out;
+  }
+}

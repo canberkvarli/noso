@@ -1,0 +1,351 @@
+.form-spacing {
+  input,
+  select,
+  textarea {
+    margin-bottom: 2rem;
+  }
+
+  label {
+    margin-bottom: 1rem;
+  }
+}
+
+.form-select {
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -webkit-appearance: none;
+}
+
+select {
+  cursor: pointer;
+
+  option {
+    color: initial !important;
+  }
+}
+
+.session-feedback-table {
+  .sortable-th {
+    cursor: auto;
+    width: 9rem;
+  }
+
+  form select {
+    cursor: pointer;
+    text-transform: capitalize;
+  }
+}
+
+.striped {
+  color: $light-black;
+  flex: 1;
+  font-size: 0.85rem;
+}
+
+.magic-link.modal {
+  .magic-link-url {
+    margin: -5px 0 -10px;
+
+    input {
+      border: 1px solid $light-gray;
+      border-bottom-left-radius: 5px;
+      border-right: 0;
+      border-top-left-radius: 5px;
+      outline: none;
+      padding: 5px;
+    }
+
+    button {
+      background-color: $lightest-grey;
+      border: 1px solid $light-gray;
+      border-bottom-right-radius: 5px;
+      border-left: 0;
+      border-top-right-radius: 5px;
+      padding: 5px 10px;
+    }
+  }
+
+  .deponent-name {
+    flex: 0 0 38%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.simple_form {
+  .error,
+  .hint {
+    color: $gull-grey;
+    display: block;
+    font-size: 15px;
+  }
+
+  input.form-control,
+  select,
+  textarea,
+  option {
+    border: 1px solid $light-button-border;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: $dark-gray;
+    height: 38px;
+    margin-top: 11px;
+
+    &::placeholder {
+      color: $lighter-grey;
+    }
+  }
+}
+
+.workspace-form {
+  background-color: $white;
+  border: 1px solid $light-button-border;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 5px 0 $light-shadow;
+  color: $black-grey;
+  margin: 3rem 4rem;
+  padding: 34px 28px;
+
+  .form-group {
+    margin-bottom: 2.6rem;
+
+    .form-control {
+      border: 1px solid $light-button-border;
+      border-radius: 0.25rem;
+      font-size: 16px;
+      font-weight: 300;
+
+      &.disabled {
+        background-color: $lightest-grey;
+        user-select: none;
+      }
+    }
+
+    .invalid-input {
+      background: $mark-yellow;
+      border-color: $yellow;
+      color: $brown;
+    }
+
+    .search-icon {
+      align-items: center;
+      display: flex;
+      margin-left: -2rem;
+      margin-top: 10px;
+    }
+
+    .plus-icon {
+      background-color: transparent;
+      border: 0;
+      font-size: 48px;
+      line-height: normal;
+      margin-left: -10px;
+      text-align: inherit;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .sub-label {
+      color: $light-grey;
+      font-size: 12px;
+      padding-top: 15px;
+    }
+
+    .note {
+      color: $light-grey;
+      font-size: 11px;
+      font-style: italic;
+    }
+  }
+
+  .workspace-icon {
+    align-items: center;
+    background-color: $persian-green;
+    border-radius: 50%;
+    display: flex;
+    height: 66px;
+    justify-content: center;
+    margin-top: 10px;
+    width: 66px;
+
+    .icon {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  label {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .add-files-section {
+    margin-bottom: 65px;
+
+    .additional-files {
+      background: url("../bootstrap-icons/upload.svg") center 50px no-repeat;
+      background-size: 35px;
+      border: 2px $file-field-border dashed;
+      border-radius: 10px;
+      filter: contrast(0.4);
+      flex-direction: column;
+      height: 172px;
+      margin: 20px 0;
+      overflow: hidden;
+      position: relative;
+
+      .dragging {
+        border-color: $dark-grey;
+      }
+
+      p {
+        bottom: 3%;
+        color: $file-field-border;
+        left: 25%;
+        position: absolute;
+        right: 25%;
+        text-align: center;
+      }
+    }
+
+    .browse-btn {
+      background-color: $black-grey;
+      border-radius: 5px;
+      color: $white;
+      cursor: pointer;
+      font-size: 16px;
+      position: relative;
+      width: 158px;
+
+      input {
+        bottom: 0;
+        cursor: pointer;
+        left: 0;
+        margin: 0;
+        opacity: 0;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+    }
+
+    .clear-selection-btn {
+      background-color: $lightest-grey;
+      border-radius: 5px;
+      color: $light-black;
+      font-size: 16px;
+      margin: 0 16px;
+      position: relative;
+      width: 158px;
+    }
+
+    .files-list {
+      padding: 1.25rem 0 1.5em;
+    }
+
+    .files-list:not(:empty)::before {
+      content: "Selected: ";
+      font-weight: 700;
+    }
+  }
+
+  .create-workspace {
+    .btn {
+      background: $lightbluegray;
+      border-radius: 5px;
+      color: $white;
+      display: flex;
+      font-weight: 700;
+      padding: 10px 33px;
+      position: relative;
+
+      &.btn-grey {
+        background: $concrete;
+        color: $lightbluegray;
+      }
+    }
+
+    .workspace-logo {
+      height: 24px;
+      margin-right: 10px;
+      width: 27px;
+    }
+
+    .next-step::after {
+      content: "›";
+      font-size: 1.5rem;
+      height: 0;
+      position: relative;
+      right: -1rem;
+      top: -0.5rem;
+    }
+
+    .previous-step::before {
+      content: "‹";
+      font-size: 1.5rem;
+      height: 0;
+      left: -1rem;
+      position: relative;
+      top: -0.5rem;
+    }
+  }
+}
+
+.form-group {
+  margin-bottom: 1rem;
+
+  &.invalid {
+    border: 1px solid $bootstrap-blue;
+    border-radius: 5px;
+    box-shadow: 0 0 0 0.25rem $bootstrap-box-shadow;
+    padding: 5px;
+  }
+}
+
+.form-inline .form-control {
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.search-icon-container {
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  padding: 0;
+  width: 30px;
+
+  &.input-group-text {
+    background-color: transparent;
+    margin-left: -2.5rem;
+  }
+
+  &:hover {
+    background-color: #e9f3ff;
+  }
+}
+
+.edit-form {
+  .field {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    margin: 0.5rem 0;
+  }
+
+  label {
+    align-items: center;
+    display: flex;
+  }
+}

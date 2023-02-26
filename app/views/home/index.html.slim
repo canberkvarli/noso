@@ -1,1 +1,93 @@
-p Hello
+.fade-in-quick
+  .container-2-col.align-start.mobile-reverse.no-margin-top.padding.left.right.fade-in-scroll
+    .left-column.padding.top-extra
+      h1.medium-bold Noso,
+      h2.medium-bold.no-margin-top
+        .typewriter.no-wrap.gold-text.inline
+        .blinking-border.blink.inline
+      p
+        | Finally, a digital testimony platform created for attorneys by attorneys and other legal industry professionals.
+        |  Capture video evidence on demand with synchronized transcription, remotely or in person, for a fraction of the typical cost.
+      = link_to("Schedule Demo", "#schedule", onclick: "showCalendly('demo')", class: "button gold-gradient shadow xl text-white")
+    .padding.left.right.align-center.mx-auto
+      / = image_tag "marketing/screen-with-blue-circle.png", width: "89%", loading: "lazy", alt: "Prevail Legal active remote session on desktop"
+
+  .padding.vertical
+  .off-white-bg.padding.vertical.horizontal
+    .align-center.padding.top-extra.fade-in-scroll
+      h2.bold Capture, Organize, Prevail
+      p.half-width.mx-auto Prevail has everything you need to conduct efficient, low-cost depositions and other proceedings in person, remotely, or a hybrid of the two.
+    .container-2-col.padding
+      .container-2-gallery.padding.top.fade-in-scroll
+        / = image_tag "marketing/tools-blue-gradient.svg", width: "27%", loading: "lazy", class: "padding left right", alt: "Prevail Legal active remote session on desktop"
+        div
+          h5.bold AI Instant Transcription
+          span.secondary-text With machine learning and AI speech-to-text technology, Prevail provides low-cost transcription in every session. And it’s searchable, too. You can even find things that were said earlier in the same proceeding.
+
+      .container-2-gallery.padding.top.fade-in-scroll
+        / = image_tag "marketing/clips-blue-gradient.svg", width: "27%", loading: "lazy", class: "padding left right", alt: "Prevail Legal active remote session on desktop"
+        div
+          h5.bold Synced Video on Demand
+          span.secondary-text Prevail records high-quality video of the witness and synchronizes it to the instant AI transcription. This allows you to create clips on the fly with just a few clicks - no videographer or outside technicians required.
+
+      .container-2-gallery.padding.top.fade-in-scroll
+        / = image_tag "marketing/transcripts-blue-gradient.svg", width: "27%", loading: "lazy", class: "padding left right", alt: "Prevail Legal active remote session on desktop"
+        div
+          h5.bold Productivity-Enhancing Tools
+          span.secondary-text Get organized with the platform’s convenient work product tools available both during and after a session. Quickly and easily mark lines of testimony with color-coded flags, or make bookmarks that include your private notes.
+
+      .container-2-gallery.padding.top.fade-in-scroll
+        / = image_tag "marketing/exhibits-blue-gradient.svg", width: "27%", loading: "lazy", class: "padding left right", alt: "Prevail Legal active remote session on desktop"
+        div
+          h5.bold Exhibit Management
+          span.secondary-text Presenting exhibits is made simple thanks to our integrated exhibit viewer. Upload files to share and present before or during a session and forget fumbling with paper. Have an odd file type? Screen sharing is also available.
+
+  .padding.vertical.left.right
+    .container-2-col.fade-in-scroll.padding.vertical
+      .left-column.padding.left
+        / = image_tag("marketing/quick-turnaround-time.jpg", width: "77%", alt: "Virtual testimony library")
+      .right-column
+        h4.light-blue-text.uppercase.medium-bold Quick Turnaround
+        h2.medium-bold Forget the waiting game
+        p
+          | After your session, we go to work improving the transcription with subsequent machine and human review.
+          |  Need a certified transcript? No problem. Expedited? We can do that, too.
+
+    .container-2-col.mobile-reverse.fade-in-scroll.padding.vertical.top
+      .left-column
+        h4.light-blue-text.uppercase.medium-bold Save on costs
+        h2.medium-bold No more confusing invoices
+        p We know traditional court reporting agencies aren't cheap - and their invoices can be full of surprises, too. That’s why Prevail offers flat rates that eliminate unexpected costs typical to the industry. With our inclusive pricing model, you don't have to worry about hidden fees or upcharges.
+
+      .right-column.padding.top
+        / = image_tag("marketing/cost-savings.jpg" , class: "padding top align-center", width: "95%", alt: "Save on costs")
+
+
+  .off-white-bg.padding.vertical.top.left.right
+    .container-2-col.fade-in-scroll
+      .align-center
+        / = image_tag "marketing/session-manager.jpg", loading: "lazy", alt: "Prevail Legal session manager", class:"min-width-large round-circle padding top"
+      .right-column
+        h4.light-blue-text.uppercase.medium-bold In-Session Assistance
+        h2.medium-bold Technology meets live support
+        p
+          | Prevail is more than just tech. Thanks in part to highly skilled Session Managers, conducting remote depositions on our platform is a breeze.
+          |  Present during all virtual proceedings, Session Managers that essentially act as a hybrid between a digital court reporter and a technical assistant.
+          |  They help facilitate the swearing of witnesses, assist with the presentation and marking of exhibits, provide technical assistance, and much more.
+
+  .d-flex.space-between.mobile-reverse.bg-blue.text-white
+    .padding.both.fade-in-scroll
+      h2.medium-bold Schedule a demo today
+      p The digital future is here. Don’t get left behind.
+      = link_to("Learn More", "#schedule", onclick: "showCalendly('demo')", class: "button blue large")
+    .request-demo-image.fade-in-scroll alt="Prevail Legal demo"
+
+
+javascript:
+  var type = new Typewriter('type', ["Instant AI Transcription", "Lowered Costs", "Live Assistance",
+    "Lowered Costs", "Synchronized Video", "Productivity Tools"]);
+
+  setTimeout(function () {
+    document.querySelector(".blinking-border").classList.remove("blink");
+    type.type();
+  }, 1800)

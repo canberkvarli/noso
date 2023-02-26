@@ -1,0 +1,368 @@
+@import "../session_v2/session_variables";
+
+body {
+  .flash {
+    animation: flash 1s ease-out;
+    animation-iteration-count: 1;
+  }
+
+  .panel-flash {
+    animation: flash 2s ease-out;
+    animation-iteration-count: 3;
+  }
+
+  .fade-in {
+    animation: fadeIn 2.9s ease-in;
+    opacity: 1;
+
+    &-delay {
+      animation: delayFadeIn 3.2s ease-in;
+      opacity: 1;
+    }
+
+    &-long-delay {
+      animation: delayFadeIn 4.8s ease-in;
+      opacity: 1;
+    }
+
+    &-quick {
+      animation: delayFadeIn 1.5s ease-in;
+      opacity: 1;
+    }
+
+    &-quickest {
+      animation: delayFadeIn 0.5s ease-in;
+      opacity: 1;
+    }
+  }
+
+  .fade-out {
+    animation: fadeOut ease-out 1.2s;
+
+    height: 0%;
+    opacity: 0;
+  }
+
+  .fade-in-scroll {
+    opacity: 0;
+
+    &.in {
+      opacity: 1;
+      transition: 1.3s ease-in;
+    }
+  }
+
+  .yellow-bg-animation {
+    animation: yellowBg 2s;
+    background-color: transparentize($button-yellow, 0.55);
+  }
+
+  .pulse-shadow {
+    animation: pulseShadow 1.6s infinite;
+
+    &:hover {
+      animation: none;
+    }
+  }
+
+  .blink {
+    animation: blinker 1s cubic-bezier(0.5, 0, 1, 1) 4 alternate;
+    color: $gray;
+
+    svg path {
+      animation: blinker 1s cubic-bezier(0.5, 0, 1, 1) 4 alternate;
+      fill: $gray;
+    }
+  }
+
+  .blinking-border {
+    border-right: 0.3rem solid $lighter-grey;
+    padding-right: 0.2rem;
+
+    &.blink {
+      animation: blinkingBorder 0.85s infinite;
+    }
+  }
+
+  .grow-from-center::after {
+    animation: growFromCenter 0.9s forwards;
+    background-color: transparentize($black, 0.7);
+    border-radius: 6px 6px 0 0;
+    content: "";
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    transform: translate(-50%, 0);
+    width: 0;
+  }
+
+  .transcript-line.highlight-transcript {
+    animation: highlightTranscript linear;
+    background-image: linear-gradient(to left, $light-yellow 50%, transparent 50%);
+    background-size: 200% 100%;
+  }
+}
+
+@keyframes pulseShadow {
+  30% {
+    box-shadow: 0 0 0 7px transparentize($light-blue, 0.35);
+  }
+
+  40% {
+    background-color: $light-yellow;
+    box-shadow: 0 0 0 7px transparentize($light-blue, 0.45);
+  }
+
+  100% {
+    box-shadow: 0 0 0 9px transparentize($light-blue, 0.95);
+  }
+}
+
+@keyframes yellowBg {
+  100% {
+    background-color: inherit;
+  }
+}
+
+@keyframes captionTimeout {
+  0% {
+    visibility: visible;
+  }
+
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes growFromCenter {
+  0% {
+    width: 0;
+  }
+
+  99% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes blinkingBorder {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes highlightTranscript {
+  0% {
+    background-position: 0 0;
+    opacity: 1;
+  }
+
+  100% {
+    background-position: -100% 0;
+    opacity: 1;
+  }
+}
+
+
+
+@keyframes slideMenuUp {
+  0% {
+    position: absolute;
+    transform: translateY(100%);
+  }
+
+  100% {
+    position: absolute;
+    transform: translateY(90%);
+  }
+}
+
+@keyframes slideMenuDown {
+  0% {
+    position: absolute;
+    transform: translateY(90%);
+  }
+
+  100% {
+    position: absolute;
+    transform: translateY(100%);
+  }
+}
+
+@keyframes slidePanelIn {
+  0% {
+    position: absolute;
+    transform: translateX(100%);
+  }
+
+  100% {
+    position: absolute;
+  }
+}
+
+@keyframes slidePanelOut {
+  0% {
+    margin: 1rem $panel-margin 0 0;
+    max-width: $panel-width;
+    position: absolute;
+  }
+
+  100% {
+    margin: 1rem $panel-margin 0 0;
+    position: absolute;
+    transform: translateX(100%);
+  }
+}
+
+// @keyframes hideTooltip {
+//   1% {
+//     opacity: 1;
+//   }
+
+//   80% {
+//     opacity: 1;
+//   }
+
+//   100% {
+//     opacity: 0 !important;
+//   }
+// }
+
+@keyframes fadeOutDelay {
+  0% {
+    opacity: 1;
+    z-index: 9999;
+  }
+
+  80% {
+    opacity: 1;
+    z-index: 9999;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    height: 0%;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeNotification {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes delayFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  0% {
+    background-color: transparent;
+  }
+
+  50% {
+    background-color: $light-yellow;
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes shake {
+  25% {
+    transform: rotate(17deg);
+  }
+
+  75% {
+    transform: rotate(-17deg);
+  }
+}
+
+@keyframes quickBounce {
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes shortRotate {
+  50% {
+    transform: rotate(12deg);
+  }
+}
+
+@keyframes blinker {
+  to {
+    color: $light-yellow;
+    fill: $light-yellow;
+  }
+}
+
+@keyframes animateVideoTile {
+  0% {
+    opacity: 0;
+    transform: scale(0.4) translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes highlightOutline {
+  0% {
+    outline-color: $prevail-sunglow-400;
+  }
+
+  80% {
+    outline-color: $prevail-sunglow-400;
+  }
+}

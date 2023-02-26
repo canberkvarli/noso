@@ -1,0 +1,148 @@
+// overwrite default bootstrap styles
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+body {
+  @media (min-width: 1400px) {
+    .container {
+      max-width: 1140px;
+      min-width: 60vw;
+    }
+  }
+  .btn {
+    &.btn-primary,
+    &.btn-secondary {
+      align-items: center;
+      display: inline-flex;
+      font-weight: 500;
+      justify-content: center;
+    }
+
+    &.btn-primary {
+      @include button-variant($prevail-blue-500, $prevail-blue-500, $white, $hover-background: $prevail-blue-500, $hover-border: $prevail-blue-500, $hover-color: $white, $active-background: lighten($prevail-blue-500, 10%), $active-border: lighten($prevail-blue-500, 10%), $active-color: $white, $disabled-background: $placeholder, $disabled-border: $placeholder, $disabled-color: darken($secondary-text, 30%));
+
+      &:hover,
+      &:active {
+        box-shadow: 0px 8px 10px $fourteen-shadow, 0px 3px 14px $twelve-shadow, 0px 5px 5px $twenty-shadow !important;
+      }
+    }
+
+    &.btn-secondary {
+      @include button-variant($prevail-sunglow-400, $prevail-sunglow-400, darken($prevail-sunglow-400, 10%), lighten($prevail-sunglow-400, 5%), lighten($prevail-sunglow-400, 10%), darken($prevail-sunglow-400, 30%));
+      color: $black;
+
+      &:hover,
+      &:focus {
+        color: initial;
+      }
+    }
+
+    &.btn-danger {
+      @include button-variant($red, $red, darken($red, 10%), lighten($red, 5%), lighten($red, 10%), darken($red, 30%));
+      color: $white;
+    }
+
+    &.btn-warning {
+      @include button-variant($warning-red, $warning-red, darken($warning-red, 10%), lighten($warning-red, 5%), lighten($warning-red, 10%), darken($warning-red, 30%));
+      color: $white;
+    }
+  }
+
+  .border-grey {
+    border: 1px solid $border-grey;
+  }
+
+  .bg-light {
+    background: $lightest-grey !important;
+  }
+
+  .bg-muted-grey {
+    background-color: $muted-grey;
+  }
+
+  .bg-dark {
+    background: linear-gradient(0deg, $darker-elevation, $darker-elevation), $bg-grey-black !important;
+  }
+
+  .bg-grey-black {
+    background-color: $bg-grey-black;
+  }
+
+  .bg-secondary {
+    background: linear-gradient(0deg, $darkest-elevation, $darkest-elevation), $bg-grey-black !important;
+  }
+
+  .bg-secondary-light {
+    background: linear-gradient(0deg, $dark-grey-elevation, $dark-grey-elevation), $bg-grey-black;
+  }
+
+  .py-2-5 {
+    padding-bottom: 0.75rem;
+    padding-top: 0.75rem;
+  }
+
+  .p-2-5 {
+    padding: 0.75rem;
+  }
+
+  .mb-3-5 {
+    margin-bottom: 1.35rem !important;
+  }
+
+  .mt-n2 {
+    margin-top: -1.8rem;
+  }
+
+  .rounded-sm {
+    border-radius: 4px;
+  }
+
+  .rounded {
+    border-radius: 8px !important;
+  }
+
+  .shadow-custom {
+    filter: drop-shadow(0 1px 1px $fourteen-shadow) drop-shadow(0 2px 1px $twelve-shadow) drop-shadow(0 1px 3px $twenty-shadow);
+  }
+
+  [data-bs-dismiss="modal"] {
+    cursor: pointer;
+  }
+
+  .dropdown-item:active {
+    background-color: $prevail-blue-500;
+
+    .icon {
+      filter: invert(1);
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .form-check-input:checked.soft-blue {
+    background-color: $soft-blue;
+    border-color: $soft-blue;
+  }
+
+  .table > :not(:first-child) {
+    border-top: 0;
+  }
+
+  .dropdown-menu[data-bs-popper] {
+    margin-top: 0;
+  }
+
+  .yellow-badge {
+    background-color: $yellow;
+    color: $nav-black;
+    margin: 0 4px;
+  }
+
+  .badge-info {
+    background-color: $light-blue;
+  }
+}

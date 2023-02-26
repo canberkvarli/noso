@@ -1,0 +1,43 @@
+body {
+  .logo {
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: inherit;
+    width: inherit;
+
+    &.navbar-logo {
+      background-image: url("../logo/white_logo.svg");
+      display: inline-block;
+      height: 2.4rem;
+      vertical-align: middle;
+      width: 8.4rem;
+    }
+
+    &.white-full-prevail {
+      background-image: url("../logo/white_logo.svg");
+    }
+
+    &.white-prevail-logo {
+      background-image: url("../logo/capital-p.svg");
+    }
+
+    &.black-prevail-logo {
+      background-image: url("../logo/capital-p-black.svg");
+    }
+
+    &.black-full-prevail-logo {
+      background-image: url("../logo/prevail_full_logo.svg");
+      height: 54px;
+    }
+
+    &.loading-logo {
+      height: 100px;
+      margin: auto;
+      width: 100px;
+
+      &.prevail-loading {
+        background-image: url("../logo/prevail_loading_logo.gif");
+      }
+    }
+  }
+}

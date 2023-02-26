@@ -1,0 +1,108 @@
+// Bootstrap
+.remote-sessions-body .tooltip {
+  .tooltip-inner {
+    max-width: unset;
+  }
+}
+
+.tooltip {
+  pointer-events: none; // prevents flickering when mouse is between button and tooltip (1px gap)
+
+  &[data-popper-placement="left"] {
+    margin-top: 5px !important;
+
+    .tooltip-arrow::before {
+      top: -9px;
+    }
+  }
+}
+
+// body[data-hide-tooltip] .tooltip.show {
+//   display: none;
+// }
+
+// .tooltip.show {
+//   animation: hideTooltip 2.1s ease-out;
+//   opacity: 0 !important;
+// }
+
+// Custom Tooltip
+
+.tool-tip {
+  position: relative;
+
+  .tool-box {
+    background-color: $light-black;
+    border-radius: 3px;
+    color: $white;
+    font-size: 13px;
+    line-height: 1.25;
+    min-width: 100%;
+    padding: 0.5rem;
+    position: absolute;
+    visibility: hidden;
+    white-space: pre-wrap;
+    z-index: 1;
+  }
+
+  .no-wrap {
+    white-space: nowrap;
+  }
+
+  .alt-style {
+    background: $grey-white;
+    border: 1px solid $input-grey;
+    border-radius: 0;
+    box-shadow: $triple-rgba 0 0 8px, $triple-rgba 0 1px 3px 1px;
+    color: $black;
+    font-family: "Lato";
+    font-size: 11.5px;
+    font-weight: 500;
+    padding: 0 0.25rem;
+  }
+
+  .top {
+    bottom: 1.5rem;
+  }
+
+  .bottom {
+    top: 1.65rem;
+
+    &-mid {
+      top: 2.1rem;
+    }
+
+    &-more {
+      top: 2.65rem;
+    }
+
+    &-extra {
+      top: 4.3rem;
+    }
+  }
+
+  .left {
+    left: -2.8rem;
+
+    &-mid {
+      left: -1.9rem;
+    }
+
+    &-extra {
+      left: -12rem;
+      top: -1rem;
+    }
+  }
+
+  .right {
+    left: 0.75rem;
+  }
+
+  .extra-right {
+    left: 9rem;
+  }
+
+  &:hover .tool-box {
+    visibility: visible;
+  }
+}

@@ -1,0 +1,38 @@
+@mixin sort-participant-tiles($roles) {
+  @each $role in $roles {
+    $i: index($roles, $role);
+
+    &[data-role*="#{$role}"] {
+      order: $i;
+    }
+
+    &[data-custom-role*="#{$role}"] {
+      @if ($role == "ASL") {
+        order: 1 !important;
+      } @else {
+        order: $i;
+      }
+    }
+  }
+}
+
+@mixin confidence-score() {
+  @for $i from 0 through 10 {
+    &[data-confidence^="#{calc($i / 10)}"] {
+      $float: calc($i / 10);
+
+      @if ($i > 0 and $i < 5) {
+        font-weight: 700 !important;
+      }
+
+      color: rgb((abs($float - 1) * 145), ($float * 145), 0);
+    }
+  }
+}
+
+@mixin gradient($direction, $list) {
+  background: -webkit-linear-gradient($direction, $list);
+  background: -moz-linear-gradient($direction, $list);
+  background: -o-linear-gradient($direction, $list);
+  background: linear-gradient($direction, $list);
+}

@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
+  layout 'marketing'
+
   def index
-    render layout: 'home'
+    render 'index'
   end
 end

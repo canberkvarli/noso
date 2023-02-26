@@ -1,0 +1,255 @@
+.flat-button {
+  background: transparent;
+  border: none;
+  color: inherit;
+  padding: 0;
+
+  &[disabled] {
+    opacity: 0.4;
+  }
+}
+
+.btn.dropdown-toggle.caret-off::after {
+  content: none;
+}
+
+// Bootstrap button extensions
+.btn {
+  white-space: nowrap;
+
+  &:hover {
+    border-color: transparent;
+    opacity: 0.93;
+    transition: 0.3s;
+  }
+
+  &.btn-small {
+    height: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  &.btn-medium {
+    font-size: 1.15rem;
+    height: 3.4rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  &.btn-green {
+    // @include button-variant($dark-green, $dark-green);
+    background-color: $dark-green;
+  }
+
+  &.btn-soft-blue {
+    background-color: $soft-blue;
+    color: $white;
+
+    &:hover {
+      background-color: $lightbluegray;
+      color: $white;
+    }
+  }
+
+  &.btn-blue {
+    background-color: $darkbluegray;
+    color: $white;
+
+    &:focus {
+      background-color: $darkbluegray;
+    }
+  }
+
+  &.btn-primary-blue {
+    background-color: $prevail-blue-500;
+    color: $white;
+
+    &:focus {
+      background-color: $darkbluegray;
+    }
+  }
+
+  &.btn-ghost {
+    background-color: transparent;
+    color: $white;
+
+    &:focus,
+    &:hover {
+      background-color: $dark-grey-elevation;
+      color: inherit;
+    }
+  }
+
+  &.btn-ghost-grey {
+    background-color: transparent;
+    border: 1px solid $placeholder;
+    color: $dark-bg;
+
+    &:focus,
+    &:hover {
+      background-color: $dark-grey-elevation;
+      color: inherit;
+    }
+  }
+
+  &.btn-ghost-blue {
+    background-color: $white;
+    border: solid $prevail-blue-500 1px;
+    color: $prevail-blue-500;
+
+    &:focus,
+    &:hover {
+      background-color: $prevail-blue-500;
+      color: $white;
+
+      .icon {
+        filter: invert(1);
+      }
+    }
+  }
+
+  &.btn-ghost-sunglow {
+    border: solid $prevail-sunglow-400 1px;
+    color: $prevail-sunglow-400;
+
+    &:focus,
+    &:hover {
+      border: solid 1px $white;
+      color: $white;
+    }
+  }
+
+  &.btn-bluegray {
+    background-color: $bluegray;
+
+    &:hover {
+      background-color: $black;
+    }
+  }
+
+  &.btn-outline-blue {
+    background-color: $white;
+    border-color: $bluish;
+    color: $bluish;
+
+    &:hover {
+      background-color: $bluish;
+      color: $white;
+    }
+  }
+
+  &.btn-soft-blue {
+    background-color: $soft-blue;
+    color: $white;
+
+    &:hover {
+      background-color: $dark-sea;
+      color: $white;
+    }
+  }
+
+  &.btn-gold {
+    background-color: $gold;
+  }
+
+  &.btn-yellow {
+    background-color: $button-yellow;
+  }
+
+  // Even bigger than btn-lg
+  &.btn-xl {
+    border-radius: 0.5rem;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    padding: 1.5rem;
+  }
+
+  &:focus,
+  &:active {
+    box-shadow: none !important;
+  }
+
+  // Action Button
+  // A square button with areas for icon, label, and keyboard shortcut.
+  &.action-btn {
+    border: 0;
+    display: block;
+    font-size: 0.75rem;
+    height: 75px;
+    margin-bottom: 0.5rem;
+    padding: 10px;
+    text-align: left;
+    white-space: normal;
+    width: 100px;
+
+    > .action-btn-content {
+      height: 100%;
+      position: relative;
+      width: 100%;
+    }
+
+    .action-btn-text {
+      bottom: 0;
+      left: 0;
+      line-height: 1.2;
+      position: absolute;
+    }
+
+    .action-btn-hotkey {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+}
+
+.pill-button {
+  background-color: $button-yellow;
+  border-radius: 5px;
+  color: $dark-bg;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 23px;
+  text-decoration: none;
+  transition: 0.3s;
+
+  &-small {
+    margin: 0 5px;
+    padding: 5px 20px;
+  }
+
+  &:hover {
+    background-color: darken($yellow, 12%);
+    color: $dark-bg;
+    text-decoration: none;
+  }
+}
+
+button,
+.btn {
+  &.close {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.5;
+    text-shadow: 0 1px 0 $white;
+  }
+}
+
+.schedule-btn {
+  padding: 1.5rem 2rem;
+
+  &::before {
+    background: url("../bootstrap-icons/calendar3.svg") center / contain no-repeat;
+    content: "";
+    filter: invert(1);
+    margin-right: 1rem;
+    padding: 0.75rem;
+  }
+}
+
+body {
+  .rounded-pill {
+    border-radius: 9999em;
+  }
+}

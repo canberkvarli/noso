@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type"
+    title=page_title
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    meta name="turbo-cache-control" content="no-preview"
+
+    / = render partial: "layouts/shared/google_tag_manager_head"
+    / = stylesheet_link_tag("shared")
+    = stylesheet_link_tag 'application/import', media: 'all', 'data-turbo-track': 'reload'
+    = csrf_meta_tags
+    = csp_meta_tag
+    = javascript_importmap_tags
+    / = favicon_link_tag "marketing/favicon.png"
+    / = render partial: "layouts/timecop" if Rails.env.test?
+  body.application-body data-controller="tooltips"
+    / = render partial: "layouts/shared/google_tag_manager_body"
+    = render partial: "layouts/navbar"
+    .section-body.w-100.mvh-100
+      / = render partial: "layouts/flash_message"
+      = yield
+  footer.mx-auto
+    = render partial: "layouts/footer"
+    / = render partial: "layouts/shared/fullstory"
+
+javascript:
+  document.cookie = `user_timezone=${Intl.DateTimeFormat().resolvedOptions().timeZone};path=/;`;

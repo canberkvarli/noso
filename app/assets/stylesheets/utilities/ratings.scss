@@ -1,0 +1,99 @@
+$box-shadow-one: rgba(0, 0, 0, 0.14);
+$box-shadow-two: rgba(0, 0, 0, 0.12);
+$box-shadow-three: rgba(0, 0, 0, 0.2);
+
+.screen-reader {
+  border: var(--screenReaderBorder, none);
+  clip: var(--screenReaderClip, rect(1px, 1px, 1px, 1px));
+  height: var(--screenReaderHeight, 1px);
+  overflow: var(--screenReaderOverflow, hidden);
+  padding: var(--screenReaderPadding, 0);
+  position: var(--screenReaderPosition, absolute);
+  width: var(--screenReaderWidth, 1px);
+}
+
+.rating {
+  --ratingColor: #ced6dd;
+  --ratingColorActive: #dea00a;
+  --ratingSize: 3rem;
+  --uiRatingColor: var(--ratingColor, #eee);
+  --uiRatingColorActive: var(--ratingColorActive, $gold);
+  color: var(--uiRatingColor);
+  display: var(--ratingDisplay, flex);
+  font-size: var(--ratingSize, 1rem);
+  margin-bottom: 1.1em;
+  max-height: 1em;
+}
+
+.rating-control:nth-of-type(1):focus ~ .rating-item:nth-of-type(1)::before,
+.rating-control:nth-of-type(2):focus ~ .rating-item:nth-of-type(2)::before,
+.rating-control:nth-of-type(3):focus ~ .rating-item:nth-of-type(3)::before,
+.rating-control:nth-of-type(4):focus ~ .rating-item:nth-of-type(4)::before,
+.rating-control:nth-of-type(5):focus ~ .rating-item:nth-of-type(5)::before {
+  bottom: -0.15em;
+  box-shadow: 0 0 0 var(--ratingOutlineWidth, 4px) var(--uiRatingColorActive);
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: -0.15em;
+  z-index: -1;
+}
+
+.rating-item {
+  cursor: pointer;
+  padding: 0.1em;
+  position: relative;
+}
+
+.rating-star {
+  display: block;
+  fill: currentColor;
+  height: 1em;
+  margin-bottom: 0.1em;
+  stroke-width: var(--ratingStrokeWidth, 1px);
+  width: 1em;
+}
+
+.rating:hover,
+.rating-control:nth-of-type(1):checked ~ .rating-item:nth-of-type(1),
+.rating-control:nth-of-type(2):checked ~ .rating-item:nth-of-type(-n + 2),
+.rating-control:nth-of-type(3):checked ~ .rating-item:nth-of-type(-n + 3),
+.rating-control:nth-of-type(4):checked ~ .rating-item:nth-of-type(-n + 4),
+.rating-control:nth-of-type(5):checked ~ .rating-item:nth-of-type(-n + 5) {
+  color: var(--uiRatingColorActive);
+}
+
+.rating-item:hover ~ .rating-item {
+  color: var(--uiRatingColor);
+}
+
+.feedback-card {
+  border-radius: 4px;
+  box-shadow: 0 4px 5px $box-shadow-one, 0 1px 10px $box-shadow-two, 0 2px 4px $box-shadow-three;
+  margin: 1.5rem auto 3.75rem;
+  padding: 1.5rem 3.25rem 1rem;
+}
+
+label p {
+  font-size: 14px;
+  margin-left: 5px;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 450px) {
+  .container .feedback-card {
+    border: 0;
+    box-shadow: none;
+    margin: 1.5rem auto 2rem;
+    padding: 0;
+  }
+
+  .rating {
+    --ratingSize: 2.75rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,333 @@
+/* Roboto Condensed Font */
+
+/* Light */
+@font-face {
+  font-display: swap;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Condensed Light"), local("RobotoCondensed-Light"), url("/Roboto-Condensed/RobotoCondensed-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Roboto Condensed";
+  font-style: italic;
+  font-weight: 300;
+  src: local("Roboto Condensed Light Italic"), local("RobotoCondensed-LightItalic"), url("/Roboto-Condensed/RobotoCondensed-LightItalic.ttf") format("truetype");
+}
+
+/* Normal */
+@font-face {
+  font-display: swap;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto Condensed Regular"), local("RobotoCondensed-Regular"), url("/Roboto-Condensed/RobotoCondensed-Regular.ttf") format("truetype");
+}
+
+/* Bold */
+@font-face {
+  font-display: swap;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Condensed Bold"), local("RobotoCondensed-Bold"), url("/Roboto-Condensed/RobotoCondensed-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Roboto Condensed";
+  font-style: italic;
+  font-weight: 700;
+  src: local("Roboto Condensed Bold Italic"), local("RobotoCondensed-BoldItalic"), url("/Roboto-Condensed/RobotoCondensed-BoldItalic.ttf") format("truetype");
+}
+
+/* Atkinson Hyperlegible */
+
+@font-face {
+  font-display: swap;
+  font-family: "Atkinson Hyperlegible";
+  font-weight: 400;
+  src: local("Atkinson Hyperlegible Regular"), local("AtkinsonHyperlegible-Regular"), url("/Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Atkinson Hyperlegible";
+  font-weight: 700;
+  src: local("Atkinson Hyperlegible Bold"), local("AtkinsonHyperlegible-Bold"), url("/Atkinson_Hyperlegible/AtkinsonHyperlegible-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Atkinson Hyperlegible";
+  font-style: italic;
+  src: local("Atkinson Hyperlegible Italic"), local("AtkinsonHyperlegible-Italic"), url("/Atkinson_Hyperlegible/AtkinsonHyperlegible-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Atkinson Hyperlegible";
+  font-style: italic;
+  font-weight: 700;
+  src: local("Atkinson Hyperlegible Bold Italic"), local("AtkinsonHyperlegible-BoldItalic"), url("/Atkinson_Hyperlegible/AtkinsonHyperlegible-BoldItalic.ttf") format("truetype");
+}
+
+/* Lato Font */
+
+@font-face {
+  font-display: swap;
+  font-family: "Lato";
+  font-weight: 100;
+  src: local("Lato Thin"), local("Lato-Thin"), url("/Lato/Lato-Thin.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Lato";
+  font-weight: 300;
+  src: local("Lato Light"), local("Lato-Light"), url("/Lato/Lato-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: block; /* Prevent navbar font shift on load */
+  font-family: "Lato";
+  font-weight: 500;
+  src: local("Lato Regular"), local("Lato-Regular"), url("/Lato/Lato-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Lato";
+  font-weight: 700;
+  src: local("Lato Bold"), local("Lato-Bold"), url("/Lato/Lato-Bold.ttf") format("truetype");
+}
+
+/* Montserrat Font */
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-weight: 100;
+  src: local("Montserrat Thin"), local("Montserrat-Thin"), url("/Montserrat/Montserrat-Thin.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 100;
+  src: local("Montserrat Thin Italic"), local("Montserrat-ThinItalic"), url("/Montserrat/Montserrat-ThinItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-weight: 200;
+  src: local("Montserrat Extra Light"), local("Montserrat-ExtraLight"), url("/Montserrat/Montserrat-ExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 200;
+  src: local("Montserrat Extra Light Italic"), local("Montserrat-ExtraLightItalic"), url("/Montserrat/Montserrat-ExtraLightItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-weight: 300;
+  src: local("Montserrat Light"), local("Montserrat-Light"), url("/Montserrat/Montserrat-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 300;
+  src: local("Montserrat Light Italic"), local("Montserrat-LightItalic"), url("/Montserrat/Montserrat-LightItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-weight: 400;
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url("/Montserrat/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 400;
+  src: local("Montserrat Italic"), local("Montserrat-Italic"), url("/Montserrat/Montserrat-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-weight: 500;
+  src: local("Montserrat Medium"), local("Montserrat-Medium"), url("/Montserrat/Montserrat-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 500;
+  src: local("Montserrat Medium Italic"), local("Montserrat-MediumItalic"), url("/Montserrat/Montserrat-MediumItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-weight: 600;
+  src: local("Montserrat Semi Bold"), local("Montserrat-SemiBold"), url("/Montserrat/Montserrat-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 600;
+  src: local("Montserrat Semi Bold Italic"), local("Montserrat-SemiBoldItalic"), url("/Montserrat/Montserrat-SemiBoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: bold;
+  font-weight: 700;
+  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("/Montserrat/Montserrat-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 700;
+  src: local("Montserrat Bold Italic"), local("Montserrat-BoldItalic"), url("/Montserrat/Montserrat-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-weight: 800;
+  src: local("Montserrat Extra Bold"), local("Montserrat-ExtraBold"), url("/Montserrat/Montserrat-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-weight: 800;
+  src: local("Montserrat Extra Bold Italic"), local("Montserrat-ExtraBoldItalic"), url("/Montserrat/Montserrat-ExtraBoldItalic.ttf") format("truetype");
+}
+
+/* Poppins */
+
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-weight: 400;
+  src: local("Poppins Regular"), local("Poppins-Regular"), url("/Poppins/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-weight: 500;
+  src: local("Poppins Medium"), local("Poppins-Medium"), url("/Poppins/Poppins-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-weight: 600;
+  src: local("Poppins Semi Bold"), local("Poppins-SemiBold"), url("/Poppins/Poppins-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-weight: 700;
+  src: local("Poppins Bold"), local("Poppins-Bold"), url("/Poppins/Poppins-Bold.ttf") format("truetype");
+}
+
+/* Styles */
+
+.marketing-body .main-content {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.marketing-body .nav {
+  font-family: "Lato", arial;
+}
+
+.marketing-body .footer {
+  font-family: "Lato", sans-serif;
+}
+
+.application-body,
+.depo-room-body,
+.remote-sessions-body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.lato {
+  font-family: "Lato", sans-serif;
+}
+
+.roboto-condensed {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.atkinson-hyperlegible {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+}
+
+b,
+.bold {
+  font-weight: 700;
+}
+
+.thin {
+  font-weight: 100;
+}
+
+.semi-thin {
+  font-weight: 300;
+}
+
+.medium-bold {
+  font-weight: 500;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.italicize {
+  font-style: italic;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px grey;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.letter-spacing {
+  letter-spacing: 2px;
+}

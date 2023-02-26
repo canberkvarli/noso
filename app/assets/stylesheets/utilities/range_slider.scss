@@ -1,0 +1,86 @@
+// Reset
+* {
+  &,
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+// Range Slider
+$range-width: 100%;
+
+$range-handle-color: $prevail-sunglow-400;
+$range-handle-hover-shadow: 0 0 8px 1px $prevail-sunglow-400;
+$range-handle-focus-shadow: 0 0 10px 2.5px $prevail-sunglow-400;
+$range-handle-active-shadow: 0 0 15px 4px $prevail-sunglow-400;
+$range-handle-size: 20px;
+
+$range-track-color: $disabled-grey;
+$range-track-height: 10px;
+
+.range-slider {
+  -webkit-appearance: none;
+  background: $range-track-color;
+  border-radius: 5px;
+  height: $range-track-height;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  width: 100%;
+
+  // Range Handle
+  &::-webkit-slider-thumb {
+    appearance: none;
+    background: $range-handle-color;
+    border-radius: 50%;
+    cursor: pointer;
+    height: $range-handle-size;
+    transition: background 0.15s ease-in-out;
+    width: $range-handle-size;
+
+    &:hover {
+      box-shadow: $range-handle-hover-shadow;
+    }
+  }
+
+  &:active::-webkit-slider-thumb {
+    box-shadow: $range-handle-active-shadow;
+  }
+
+  &::-moz-range-thumb {
+    background: $range-handle-color;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    height: $range-handle-size;
+    transition: background 0.15s ease-in-out;
+    width: $range-handle-size;
+
+    &:hover {
+      box-shadow: $range-handle-hover-shadow;
+    }
+  }
+
+  &:active::-moz-range-thumb {
+    box-shadow: $range-handle-active-shadow;
+  }
+
+  // Focus state
+  &:focus {
+    &::-webkit-slider-thumb {
+      box-shadow: 0 0 0 0.5px $black, $range-handle-focus-shadow;
+    }
+  }
+}
+
+// Firefox Overrides
+::-moz-range-track {
+  background: $range-track-color;
+  border: 0;
+}
+
+input::-moz-focus-inner,
+input::-moz-focus-outer {
+  border: 0;
+}

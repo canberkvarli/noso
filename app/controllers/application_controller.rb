@@ -1,3 +1,4 @@
 class ApplicationController < ActionController::Base
- layout 'home'
+ include ActionView::Layouts
+
 end
