@@ -1,2 +1,2 @@
-# coco
-Communitycoin main repo
+# NOSO
+Noso main repo
