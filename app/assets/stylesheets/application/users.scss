@@ -1,0 +1,306 @@
+.users-edit,
+.users-show {
+  color: $grey;
+
+  .edit-name,
+  .edit-contact,
+  .edit-photo {
+    align-items: center;
+    padding: 0 2rem;
+
+    .user-edit-btn {
+      background: transparent;
+      border: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .form-group {
+    display: flex;
+
+    .input {
+      display: flex;
+      width: 100%;
+    }
+
+    .form-control {
+      background: transparent;
+      border: 1px solid $light-button-border;
+      // border-color: transparent;
+      margin-right: 15px;
+
+      &:focus {
+        background-color: $grey-white;
+        box-shadow: 0 0 0 $triple-rgba inset, 0 2px 8px $clip-color;
+      }
+    }
+
+    .error {
+      margin-left: 1rem;
+    }
+  }
+
+  .header {
+    padding: 0 3rem;
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .short-row {
+    border-bottom: 1px solid $light-button-border;
+    position: relative;
+  }
+
+  .main-body {
+    align-items: start;
+    color: $dark-grey;
+    display: grid;
+    grid-gap: 30px;
+    padding: 65px 30px;
+
+    p {
+      font-size: 14px;
+      padding: 0 15px;
+    }
+  }
+
+  .info-container {
+    background-color: $white;
+    border: 1px solid $gallery;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 5px 0 $light-shadow;
+    box-sizing: border-box;
+
+    .row {
+      padding: 0 15px 15px;
+    }
+  }
+
+  .change {
+    .user-avatar {
+      padding: 0.4rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+      -webkit-filter: brightness(70%);
+      -moz-transition: all 0.25s ease;
+      -ms-transition: all 0.25s ease;
+      -o-transition: all 0.25s ease;
+      -webkit-transition: all 0.25s ease;
+      transition: all 0.25s ease;
+    }
+  }
+
+  .white-bg {
+    background-color: $white;
+    margin: 0;
+  }
+
+  .note {
+    color: $light-grey;
+    font-size: 14px;
+  }
+
+  .view-btn {
+    color: $dark-blue;
+    padding: 0 2rem;
+  }
+
+  #photo-modal {
+    .modal-dialog {
+      max-width: 700px;
+    }
+
+    .modal-body {
+      padding: 4rem;
+
+      .photo-upload-icon {
+        margin: 2rem;
+        width: 40%;
+      }
+
+      p {
+        color: $light-grey;
+        margin-bottom: 2rem;
+      }
+
+      .photo-input-field {
+        background: url("../users/photo-upload.svg") no-repeat center;
+        color: transparent;
+        cursor: pointer;
+        height: 180px;
+        opacity: 0.8;
+        width: 100%;
+
+        &::-webkit-file-upload-button {
+          display: none;
+          * {
+            display: none;
+          }
+        }
+      }
+
+      .photo-upload-btn {
+        background-color: $grey;
+        border-radius: 40px;
+        color: $white;
+        cursor: pointer;
+        margin: 2rem auto;
+        padding: 0.5rem 1rem;
+        transition: 0.3s;
+        width: 150px;
+
+        &:hover {
+          opacity: 0.9;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .canvas-wrapper {
+      margin: auto;
+      max-width: 450px;
+
+      canvas {
+        max-width: 100%;
+      }
+
+      canvas:not([height]) {
+        display: none;
+      }
+
+      .cropper-container {
+        display: none;
+      }
+    }
+  }
+}
+
+.small-avatar .user-avatar {
+  height: 50px;
+}
+
+.user-avatar {
+  background-color: $darkbluegray;
+  min-width: 50px;
+  object-fit: cover;
+}
+
+.rounded-circle {
+  aspect-ratio: 1 / 1;
+}
+
+// =============================================================================== //
+// ===========================     MEDIA QUERIES       =========================== //
+// =============================================================================== //
+
+// -------------- Mobile START -------------- //
+
+@media (max-width: 689px) {
+  .main-body {
+    grid-template-columns: 1fr;
+  }
+
+  .edit-btn {
+    position: relative;
+  }
+
+  .user-info {
+    padding-top: 25px;
+    width: 100%;
+  }
+
+  .short-row {
+    padding: 3rem 9rem 3rem 3.5rem;
+  }
+
+  .users-edit {
+    margin: 2rem auto !important;
+  }
+
+  .avatar {
+    margin-right: 20px;
+
+    img:nth-child(2) {
+      height: 40px;
+      width: 40px;
+    }
+  }
+}
+
+@media (min-width: 690px) {
+  .main-body {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .short-row {
+    padding: 2.5rem 5rem 1.5rem;
+  }
+
+  .user-info {
+    padding: 15px 30px;
+  }
+
+  .edit-btn {
+    bottom: 0.4rem;
+    font-size: 0.85rem;
+    position: absolute;
+    right: 6rem;
+  }
+}
+
+@media (max-width: 575px) {
+  body .users-show,
+  body .edit-user-profile {
+    .background-cover {
+      height: 180px;
+    }
+
+    .table-avatar {
+      img {
+        height: 150px;
+        width: 150px;
+      }
+    }
+
+    .profile-card {
+      bottom: 120px;
+    }
+  }
+}
+
+// -------------- Mobile END -------------- //
+
+.users-show {
+  .user-initials {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  .heading {
+    border-bottom: 1px solid $concrete;
+    padding: 10px 15px;
+  }
+}
+
+.users-edit {
+  border: 1px solid $gallery;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 5px 0 $light-shadow;
+  box-sizing: border-box;
+  max-width: 1100px;
+}
+
+.post-signup {
+  font-size: 24px;
+}
+
+canvas:not([height]) {
+  display: none;
+}

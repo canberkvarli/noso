@@ -1,0 +1,300 @@
+.briefcase-panel {
+  background-color: $white;
+  left: 0;
+  margin: 0 auto;
+  max-width: 900px;
+  padding-top: 0.25rem;
+  right: 0;
+
+  .accordion-detail {
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 500;
+    margin-top: 1px;
+  }
+
+  .accordion-title {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .briefcase-dots {
+    margin-left: 2.5rem;
+    width: 16px;
+  }
+
+  .briefcase-dropdown {
+    min-width: 8rem;
+  }
+
+  .briefcase-dropdown-item {
+    font-size: 14px;
+    height: 37px;
+    padding: 0 0.5rem;
+    width: 142px;
+  }
+
+  .briefcase-icon {
+    height: 12px;
+  }
+
+  .briefcase-file-earmark {
+    height: 24px;
+    margin-right: 0.5rem;
+    width: 24px;
+  }
+
+  .exhibit-icon {
+    &-stamp {
+      background: url("../bootstrap-icons/patch-fill.svg") no-repeat;
+      filter: invert(81%) sepia(74%) saturate(3050%) hue-rotate(330deg) brightness(108%) contrast(102%);
+      inset: -9px auto auto 18px;
+    }
+  }
+
+  .exhibit-item-body {
+    flex: 1 1 auto;
+    word-break: break-all;
+  }
+
+  .exhibit-item-action-group {
+    fill: $black;
+    margin-right: 0.4rem;
+  }
+
+  .file-upload-field {
+    background-color: $lightest-blue;
+    border: 1px $black dashed;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    width: 390px;
+
+    &.dragging {
+      background-color: $prevail-blue-20;
+      border: 1px solid $dark-grey;
+
+      .btn {
+        pointer-events: none;
+      }
+    }
+  }
+
+  .file-row {
+    color: $black;
+    fill: $black;
+    font-size: 0.7rem;
+    stroke: transparent;
+
+    &:hover {
+      background-color: $lightest-blue;
+      cursor: grab;
+    }
+
+    .briefcase-exhibit-item,
+    .exhibit-item {
+      padding: 0.5rem 0.25rem 0.5rem 0;
+
+      &-body {
+        width: 80%;
+      }
+
+      &-icon {
+        .file-earmark {
+          height: 30px;
+          max-height: 30px;
+          max-width: 30px;
+          width: 30px;
+
+          &-image {
+            background: url("../bootstrap-icons/file-earmark-image.svg") no-repeat;
+          }
+
+          &-play {
+            background: url("../bootstrap-icons/file-earmark-play.svg") no-repeat;
+          }
+
+          &-spreadsheet {
+            background: url("../bootstrap-icons/file-earmark-spreadsheet.svg") no-repeat;
+          }
+
+          &-text {
+            background: url("../bootstrap-icons/file-earmark-text.svg") no-repeat;
+          }
+
+          &-richtext {
+            background: url("../bootstrap-icons/file-earmark-richtext.svg") no-repeat;
+          }
+
+          &-pdf {
+            background: url("../bootstrap-icons/file-earmark-pdf.svg") no-repeat;
+            background-size: cover;
+          }
+        }
+      }
+    }
+
+    .file-earmark-icon {
+      filter: invert(0);
+    }
+
+    .exhibit-icon {
+      &-stamp {
+        background: url("../bootstrap-icons/patch-fill.svg") no-repeat;
+        background-size: 75%;
+        filter: invert(30%) sepia(71%) saturate(1849%) hue-rotate(196deg) brightness(102%) contrast(92%);
+        height: 16px;
+        left: 16px;
+        top: -8px;
+        width: 16px;
+      }
+    }
+
+    .file-badge {
+      color: $black;
+      font-weight: 600;
+      padding: 0 0.65em;
+      width: fit-content;
+
+      &.presented-badge {
+        background-color: $yellow;
+
+        &::after {
+          content: "Presented";
+        }
+      }
+
+      &.presenting-badge {
+        background-color: $success-green;
+
+        &::after {
+          content: "Presenting";
+        }
+      }
+    }
+
+    &.line-bottom {
+      border-bottom: 1px solid $prevail-blue-400;
+    }
+
+    &.line-top {
+      border-top: 1px solid $prevail-blue-400;
+    }
+
+    .stop-present-dropdown {
+      button {
+        background: none;
+        border: 0;
+        font-weight: 400;
+      }
+
+      &:hover {
+        background-color: var(--bs-dropdown-link-hover-bg);
+      }
+    }
+  }
+
+  .column-wide {
+    min-width: 45%;
+    width: 45%;
+  }
+
+  .column {
+    min-width: 31%;
+  }
+
+  .column-title {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .status-column {
+    display: none;
+  }
+
+  .sort {
+    border: 1px solid $placeholder;
+    border-radius: 4px;
+    color: $sort-grey;
+    font-size: 12px;
+    height: 27px;
+    padding: 5px;
+    width: 100px;
+  }
+
+  .action-dropdown {
+    &:focus,
+    &:hover {
+      background-color: $prevail-blue-20;
+    }
+  }
+
+  .width {
+    width: 142px;
+  }
+}
+
+#briefcase-modal-body {
+  max-height: 75vh;
+  overflow-y: auto;
+}
+
+.popout-container,
+.session-body {
+  .briefcase-exhibit-item .exhibit-review-actions {
+    display: none;
+  }
+
+  .file-badge {
+    &.presented-badge {
+      background-color: $yellow;
+    }
+  }
+
+  .file-resource-modal-list {
+    tr:last-child {
+      border-bottom: none !important;
+    }
+  }
+}
+
+.session-review-body {
+  .session-review-action-group {
+    display: flex;
+  }
+}
+
+.file-earmark {
+  height: 16px;
+  width: 16px;
+
+  &-image {
+    background: url("../bootstrap-icons/file-earmark-image.svg") no-repeat;
+  }
+
+  &-play {
+    background: url("../bootstrap-icons/file-earmark-play.svg") no-repeat;
+  }
+
+  &-spreadsheet {
+    background: url("../bootstrap-icons/file-earmark-spreadsheet.svg") no-repeat;
+  }
+
+  &-text {
+    background: url("../bootstrap-icons/file-earmark-text.svg") no-repeat;
+  }
+
+  &-richtext {
+    background: url("../bootstrap-icons/file-earmark-richtext.svg") no-repeat;
+  }
+
+  &-pdf {
+    background: url("../bootstrap-icons/file-earmark-pdf.svg") no-repeat;
+    background-size: cover;
+  }
+
+  &-minus {
+    background: url("../bootstrap-icons/file-earmark-minus.svg") no-repeat;
+    background-size: cover;
+  }
+}

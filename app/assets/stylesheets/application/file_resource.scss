@@ -1,0 +1,261 @@
+#bf-icon {
+  height: 12px;
+  width: 8px;
+}
+
+.bf-list-title {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+#briefcase-modal-bottom {
+  background: $white;
+  border-radius: 4px 4px 0 0;
+  bottom: 0;
+  box-shadow: 0 2px 2px $briefcase-box-shadow-left, 0 3px 1px $briefcase-box-shadow-top, 0 1px 5px $briefcase-box-shadow-right;
+  max-height: 207px;
+  padding: 8px 0 0 16px;
+  right: 20px;
+  width: 350px;
+
+  .briefcase-modal-button {
+    height: 13px;
+    margin-top: 10px;
+  }
+
+  .briefcase-modal-header {
+    width: 320px;
+  }
+
+  .briefcase-modal-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 8px;
+  }
+
+  .content {
+    overflow: scroll;
+    transition: height 0.4s ease-out;
+    width: 320px;
+  }
+
+  .green-background {
+    background-color: $success-green;
+  }
+
+  .high-z {
+    z-index: 10000;
+  }
+
+  .percentage {
+    font-size: 8px;
+  }
+
+  .progress {
+    border-radius: 39px;
+    height: 5px;
+    margin: 5px;
+    width: 280px;
+  }
+
+  progress::-webkit-progress-value {
+    background: linear-gradient(90deg, $prevail-blue-400 0%, $prevail-blue-100 100%);
+  }
+
+  .unsupported {
+    margin-bottom: 0.8rem;
+  }
+
+  .unsupported-error {
+    color: $warning-red;
+    font-size: 10px;
+  }
+
+  .wrapper {
+    width: 300px;
+  }
+}
+
+.pdftron-viewer {
+  .card-header {
+    .title {
+      color: $black-grey;
+      font-size: 1.5rem;
+    }
+  }
+
+  .card-body {
+    &.pdftron {
+      height: calc(500px + 25vh);
+    }
+  }
+}
+
+.files-upload-list {
+  max-height: 20vh;
+}
+
+.file-resource-video {
+  left: 50%;
+  max-width: 1200px;
+  position: relative;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.file-resource-table {
+  .slim-column {
+    width: 10%;
+  }
+
+  tbody {
+    display: block;
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    max-height: 50vh;
+    overflow: auto;
+  }
+
+  thead,
+  tbody tr,
+  tfoot {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  thead {
+    width: 98%;
+  }
+}
+
+.exta-info-toggle::after {
+  background: url("../bootstrap-icons/caret-right-fill.svg") center / 90% no-repeat;
+  content: "";
+  float: right;
+  padding: 0.6rem;
+  transform: rotate(90deg);
+  transition: 0.45s;
+}
+
+.exta-info-toggle.collapsed::after {
+  transform: rotate(0deg);
+}
+
+.truncated {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-list {
+  max-height: 55vh;
+  overflow-y: auto;
+
+  a {
+    color: $dark-sea;
+  }
+
+  &:empty::after {
+    content: "Links to other folders and files will appear here when added to this folder";
+  }
+}
+
+.word-wrap {
+  word-wrap: "break-word";
+}
+
+.file-show,
+.folder-show {
+  .btn {
+    font-family: "Poppins";
+    font-weight: 600;
+  }
+}
+
+@mixin sort-icon {
+  background: url("../bootstrap-icons/caret-right-fill.svg") center / 90% no-repeat;
+  content: "";
+  margin-left: 10px;
+  padding: 0.6rem;
+  position: absolute;
+  transition: 0.45s;
+}
+
+.asc-sort::after {
+  @include sort-icon;
+  transform: rotate(-90deg);
+}
+
+.desc-sort::after {
+  @include sort-icon;
+  transform: rotate(90deg);
+}
+
+.modal-content {
+  .btn-rounded {
+    border-radius: 40px;
+    font-size: 14px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .file-upload-field {
+    align-items: center;
+    background-color: $lightest-blue;
+    border: 1px $black dashed;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    max-width: 380px;
+    padding: 1rem;
+
+    &.dragging {
+      background-color: $prevail-blue-20;
+      border: 1px solid $dark-grey;
+
+      .btn {
+        pointer-events: none;
+      }
+    }
+  }
+
+  .line-around {
+    &::before,
+    &::after {
+      border-top: 0.08rem solid $prevail-blue-600;
+      content: "";
+      display: inline-block;
+      margin: 0 1rem;
+      transform: translateY(-0.25rem);
+      width: 8rem;
+    }
+  }
+
+  .modal-footer.border-none,
+  .modal-header.border-none {
+    border: 0;
+  }
+
+  .point {
+    cursor: pointer;
+  }
+
+  .text-input {
+    width: 302px;
+  }
+
+  .upload-bg {
+    background-color: $lightest-blue;
+    border: 1px dashed $prevail-blue-600;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-left: 2rem;
+  }
+}
+
+.modal-dialog.file-form {
+  width: 28rem !important;
+}

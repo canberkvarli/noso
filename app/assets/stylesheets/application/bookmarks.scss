@@ -1,0 +1,160 @@
+.untitled-message {
+  font-style: italic;
+}
+
+.bookmark-index {
+  width: 100%;
+  padding: 0 3rem;
+  color: $grey;
+  height: 100%;
+
+  .header {
+    padding-bottom: 1rem;
+    border-bottom: solid 1px $border-grey;
+
+    .title {
+      font-size: 20px;
+      padding: 0 13px;
+      background-color: $yellow;
+      width: max-content;
+    }
+
+    .notes {
+      margin-top: 1.5rem;
+      font-size: 16px;
+      font-family: unset;
+      max-width: 70rem;
+      white-space: pre-wrap;
+    }
+  }
+
+  .search-box {
+    .video.search-input {
+      width: 100%;
+      padding: 5px;
+    }
+  }
+
+  .filters-section {
+    margin-right: 1rem;
+    margin-top: 1rem;
+    border-bottom: solid 1px $border-grey;
+    padding: 0.8rem 0;
+
+    a {
+      color: $dark-blue;
+      text-decoration: underline;
+    }
+
+    .reset-filters-btn {
+      float: right;
+    }
+  }
+
+  .tags-section {
+    color: $light-grey;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: solid 1px $border-grey;
+    height: 100%;
+
+    ul {
+      margin-top: 0.5rem;
+      list-style: none;
+      padding: 0;
+
+      li {
+        a {
+          border: none;
+          color: $dark-blue;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.bookmark-icon .cls-1 {
+  fill: inherit;
+}
+
+.card-body {
+  .modal-title {
+    display: none;
+  }
+
+  .bookmark-close {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .bookmark-index {
+    margin: 0 1rem;
+
+    .filters-section {
+      .reset-filters-btn {
+        float: unset;
+      }
+    }
+
+    .header {
+      margin-top: 1rem;
+    }
+    .tags-section {
+      height: auto;
+      border: none;
+      margin: 0;
+      height: 0;
+      ul {
+        li {
+          margin: 0 5px;
+          display: inline;
+        }
+      }
+    }
+  }
+}
+
+select.tag-color[data-chosen="#007bff"] {
+  border-color: $light-blue;
+  box-shadow: 0 0 0 0.2rem $light-blue;
+  outline: 0;
+}
+
+select.tag-color[data-chosen="#ffee14"] {
+  border-color: $bright-yellow;
+  box-shadow: 0 0 0 0.2rem $bright-yellow;
+  outline: 0;
+}
+
+select.tag-color[data-chosen="#FE1E1E"] {
+  border-color: $bright-red;
+  box-shadow: 0 0 0 0.2rem $bright-red;
+  outline: 0;
+}
+
+.show-opacity {
+  opacity: 1;
+}
+
+.hide-opacity {
+  opacity: 0;
+  transition: opacity 400ms;
+}
+
+.depo-room-body,
+.remote-deposition {
+  #bookmark-form {
+    background: $white;
+    border-radius: 6px;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    transform: translate(0%, 30%);
+    width: 40%;
+  }
+}

@@ -1,0 +1,240 @@
+@import "utilities/colors";
+
+#setup-mfa-card {
+  .step:not(:last-child) {
+    .number::after {
+      background-color: $prevail-blue-20;
+      content: "";
+      display: block;
+      height: 100%;
+      margin: 0 auto;
+      width: 3px;
+    }
+
+    &.been-active:not(.active) .number::after {
+      background-color: $prevail-blue-500;
+    }
+  }
+
+  .number {
+    border-radius: 50%;
+
+    &::before {
+      align-items: center;
+      background-color: $prevail-blue-20;
+      border-radius: 50%;
+      content: attr(data-step-number);
+      display: flex;
+      height: 40px;
+      justify-content: center;
+      min-width: 40px;
+      pointer-events: none;
+    }
+  }
+
+  .step-box {
+    border: 1px solid $placeholder;
+    padding: 1rem;
+  }
+
+  .step-head {
+    font-size: 18px;
+  }
+
+  .collapse-step.btn {
+    align-self: end;
+    font-size: 14px;
+    width: fit-content;
+
+    &.download-codes-button {
+      align-items: center;
+      align-self: start;
+      display: flex;
+      font-size: 14px;
+      white-space: nowrap;
+      width: fit-content;
+    }
+  }
+
+  .collapse-step .btn {
+    font-size: 14px;
+    width: fit-content;
+  }
+
+  .setup-modal-button {
+    font-size: 14px;
+  }
+
+  .code-size {
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  .secret-key-header {
+    font-size: 20px;
+  }
+
+  .secret-key {
+    font-size: 16px;
+  }
+
+  .code-header-size {
+    font-size: 20px;
+  }
+
+  .code-modal-width {
+    width: 400px;
+  }
+
+  .code-box {
+    width: 350px;
+  }
+
+  .fit-content {
+    width: fit-content;
+  }
+
+  #open-key-modal {
+    color: $link-blue;
+    cursor: pointer;
+  }
+
+  #step-four {
+    &.been-active,
+    &.active {
+      .number::before {
+        background-color: $success-green;
+        border-radius: 50%;
+        color: $white;
+        height: 40px;
+        min-width: 40px;
+        pointer-events: none;
+
+        .icon {
+          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(197deg) brightness(99%) contrast(105%);
+        }
+      }
+    }
+  }
+
+  .been-active,
+  .active {
+    .number::before {
+      background-color: $prevail-blue-500;
+      color: $white;
+    }
+  }
+
+  .step:not(.been-active, .active) {
+    .number::before {
+      background-color: $prevail-blue-20;
+      color: $black;
+    }
+  }
+
+  .step:not(:first-child) {
+    padding-top: 2rem;
+  }
+
+  .step:not(.active) {
+    .step-box {
+      border: unset;
+      padding: .5rem;
+    }
+
+    .collapse-step {
+      display: none;
+    }
+
+    &#step-four .number {
+      background-color: $prevail-blue-20;
+      border-radius: 5 0%;
+      color: $white;
+      height: 40px;
+      min-width: 40px;
+      pointer-events: none;
+
+      .icon {
+        filter: unset;
+      }
+    }
+  }
+}
+
+#multi-factor-card {
+  .card {
+    aspect-ratio: 9 / 10;
+  }
+
+  .otp-attempt-field {
+    aspect-ratio: 3 / 4;
+    border: 2px solid $light-gray;
+    margin: .5rem;
+    width: 8%;
+
+    &.recovery-field {
+      margin: .2rem;
+    }
+  }
+
+  .use-recovery-code-link,
+  .help-guide-link {
+    color: $link-blue;
+    cursor: pointer;
+  }
+}
+
+#multi-factor-disabler {
+  .prevail-logo {
+    padding: 2rem;
+    width: 70%;
+  }
+
+  .direction-message {
+    margin-top: .5rem;
+    text-align: left;
+  }
+
+  .otp-attempt-field {
+    aspect-ratio: 3 / 4;
+    border: 2px solid $light-gray;
+    margin: .5rem;
+    width: 8%;
+
+    &.recovery-field {
+      margin: .2rem;
+    }
+  }
+}
+
+.help-guide-link {
+  color: $link-blue;
+  cursor: pointer;
+}
+
+.not-a-button {
+  background-color: unset;
+  border: unset;
+}
+
+.disable-header-size {
+  font-size: 24px;
+}
+
+.title-message {
+  font-size: larger;
+}
+
+@media (min-width: 768px) {
+  #multi-factor-card {
+    width: 47%;
+  }
+
+  #setup-mfa-card {
+    width: 80%;
+  }
+
+  .disable-modal-content {
+    padding: 3rem;
+  }
+}

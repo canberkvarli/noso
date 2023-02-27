@@ -1,0 +1,12 @@
+@import "utilities/colors";
+
+#access-background {
+  height: 80%;
+  margin-top: 5%;
+}
+
+#access-backdrop {
+  border: 1px $placeholder solid;
+  height: 110%;
+  width: 85%;
+}

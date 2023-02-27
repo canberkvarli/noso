@@ -29,15 +29,12 @@ html lang="en"
     meta content="width=device-width, initial-scale=1" name="viewport"
 
     // Stylesheets
-    / = stylesheet_link_tag("shared")
-    / = stylesheet_link_tag("marketing/stylesheet")
+    = stylesheet_link_tag("marketing/stylesheet")
     / = favicon_link_tag "marketing/favicon.png"
 
     body.marketing-body
-      / = render partial: "layouts/shared/google_tag_manager_body"
-      / = render partial: "layouts/shared/fullstory"
-      / = render partial: "layouts/marketing/navbar_marketing"
+      = render partial: "layouts/marketing/navbar_marketing"
       .nav-spacing
       .main-content
         = yield
-      / = render partial: "layouts/marketing/footer_marketing"
+      = render partial: "layouts/marketing/footer_marketing"

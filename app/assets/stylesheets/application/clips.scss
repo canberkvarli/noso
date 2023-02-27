@@ -1,0 +1,33 @@
+.clip-list-item {
+  .no-pointer {
+    cursor: initial;
+    filter: none;
+  }
+}
+
+.deposition-room {
+  .clip-list-item .icon {
+    &.download,
+    &.delete {
+      filter: invert(1);
+    }
+  }
+
+  .clip-list-item:hover {
+    .icon {
+      &.download,
+      &.delete {
+        filter: invert(0);
+      }
+    }
+
+    .exhibit-item-body {
+      color: $black;
+    }
+  }
+}
+
+.clip-duration-bar {
+  background-color: $placeholder;
+  height: 3rem;
+}

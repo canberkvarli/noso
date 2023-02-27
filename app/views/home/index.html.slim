@@ -1,9 +1,8 @@
-.fade-in-quick
+.fade-in-quick.navbar
   .container-2-col.align-start.mobile-reverse.no-margin-top.padding.left.right.fade-in-scroll
     .left-column.padding.top-extra
       h1.medium-bold Noso,
       h2.medium-bold.no-margin-top
-        .typewriter.no-wrap.gold-text.inline
         .blinking-border.blink.inline
       p
         | Finally, a digital testimony platform created for attorneys by attorneys and other legal industry professionals.
@@ -81,13 +80,3 @@
       p The digital future is here. Don’t get left behind.
       = link_to("Learn More", "#schedule", onclick: "showCalendly('demo')", class: "button blue large")
     .request-demo-image.fade-in-scroll alt="Prevail Legal demo"
-
-
-javascript:
-  var type = new Typewriter('type', ["Instant AI Transcription", "Lowered Costs", "Live Assistance",
-    "Lowered Costs", "Synchronized Video", "Productivity Tools"]);
-
-  setTimeout(function () {
-    document.querySelector(".blinking-border").classList.remove("blink");
-    type.type();
-  }, 1800)

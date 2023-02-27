@@ -7,8 +7,7 @@ html
     meta name="turbo-cache-control" content="no-preview"
 
     / = render partial: "layouts/shared/google_tag_manager_head"
-    / = stylesheet_link_tag("shared")
-    = stylesheet_link_tag 'application/import', media: 'all', 'data-turbo-track': 'reload'
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload'
     = csrf_meta_tags
     = csp_meta_tag
     = javascript_importmap_tags

@@ -1,0 +1,32 @@
+@import "bootstrap/scss/variables";
+
+//  new custom Modal avoid top one
+.js-modal {
+  background-color: $white;
+  left: 50%;
+  min-width: 350px;
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 35vw;
+  z-index: 10000;
+
+  .modal-title {
+    color: $black-grey;
+  }
+
+  &#story-form {
+    top: 75%;
+  }
+}
+
+.modal-file-resource-panel .modal-body {
+  margin: 2rem;
+  max-height: 65vh;
+  overflow: auto;
+}
+
+.transcription-summary {
+  max-height: 120px;
+}

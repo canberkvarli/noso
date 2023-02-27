@@ -1,0 +1,242 @@
+@import "utilities/colors";
+@import "utilities/animations";
+@import "bootstrap/scss/bootstrap";
+@import "utilities/bootstrap_overrides";
+@import "utilities/buttons";
+
+.full-height {
+  height: 100%;
+  margin-bottom: 6rem;
+}
+
+.registration-page {
+  background-color: $concrete;
+  color: $dark-black;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+
+  .main-body {
+    background: $white;
+    border: 1px solid $gallery;
+    border-radius: 0.25rem;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+
+    .info-container {
+      border-right: 1px solid $gallery;
+      padding: 3rem 0;
+    }
+
+    .prevail-logo {
+      height: auto;
+      padding: 0 0 0.25rem 4rem;
+      width: 235px;
+    }
+
+    .heading {
+      font-size: 30px;
+      padding: 20px;
+    }
+
+    .error-notification {
+      margin-top: -0.5rem;
+    }
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  h2 {
+    margin: 1rem 0;
+  }
+
+  .note-text {
+    padding: 0 5rem 0.25rem;
+  }
+
+  .form-card {
+    border-bottom: 0;
+    border-radius: 0;
+    border-right: 0;
+    border-top: 0;
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .text-input {
+      border-color: $input-grey;
+      font-size: 15px;
+      height: 42px;
+
+      ::placeholder {
+        color: $gull-grey;
+      }
+    }
+
+    .phonearea {
+      width: 20%;
+    }
+
+    .phonedetail1 {
+      width: 30%;
+    }
+
+    .phonedetail2 {
+      width: 40%;
+    }
+
+    .form-actions {
+      text-align: center;
+    }
+
+    .submit-button {
+      background-color: $lightbluegray;
+      border: 0;
+      border-radius: 5px;
+      color: $white;
+      font-size: 0.95rem;
+      padding: 0.75rem 3.75rem;
+
+      &:hover {
+        background-color: darken($lightbluegray, 5%);
+      }
+    }
+  }
+
+  .forgot-password-btn {
+    margin: 1rem 0;
+    text-align: center;
+
+    a {
+      color: $light-grey;
+    }
+  }
+
+  .signin-message {
+    font-size: 12px;
+    margin-top: 35px;
+    text-align: center;
+  }
+
+  .link-btn {
+    margin-left: 3px;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .divider {
+    border-bottom: 1px solid $input-grey;
+    font-size: 1.15rem;
+    line-height: 0.1em;
+
+    small {
+      background: $white;
+      line-height: 0;
+    }
+  }
+}
+
+@media (min-width: 831px) {
+  .registration-page {
+    .p-logo {
+      display: none;
+    }
+  }
+}
+
+.soft-blue-text {
+  color: $light-blue;
+}
+
+@media (max-width: 830px) {
+  .registration-page {
+    .p-logo {
+      margin-bottom: -35px;
+      width: 54px;
+    }
+
+    .main-body {
+      grid-template-columns: 1fr;
+
+      .info-container {
+        display: none;
+      }
+    }
+
+    .form-card {
+      .instruction {
+        font-size: 22px;
+      }
+    }
+
+    .submit-button {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .registration-page {
+    .main-body {
+      margin: 0;
+    }
+  }
+}
+
+.phonefield {
+  color: $white;
+  display: flex;
+  justify-content: space-between;
+
+  input {
+    color: $black;
+  }
+}
+
+.sso-container {
+  .sso-btn {
+    border: 1px solid $close-white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px $google-login-shadow;
+    color: $google-blue;
+    font-family: "Lato", sans-serif;
+    font-size: 0.875em;
+    outline: 0;
+    text-decoration: none;
+    user-select: none;
+    width: 100%;
+
+    &:hover,
+    &:active {
+      box-shadow: 0 0 5px $google-login-shadow-hover;
+      color: $google-blue;
+      transition: box-shadow 300ms linear;
+    }
+
+    &:focus {
+      box-shadow: 0 0 5px $google-login-shadow;
+    }
+
+    &::before {
+      content: "";
+      padding: 0.85rem;
+    }
+
+    &.google::before {
+      background: url("../registration/google-logo.svg") no-repeat center center / 84%;
+    }
+
+    &.microsoft::before {
+      background: url("../registration/microsoft-logo.svg") no-repeat 38% center / 54%;
+    }
+
+    &.enterprise::before {
+      background: url("../registration/enterprise-login.svg") no-repeat 38% center / 54%;
+    }
+  }
+}

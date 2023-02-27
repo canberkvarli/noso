@@ -1,0 +1,226 @@
+// Place all the styles related to the ChatRooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+// NOTE: Class "chat-room-update" will probably need to be renamed
+
+// Invisible overlay at the bottom of the screen for containing chat boxes.
+
+.chat-pop-out {
+  height: 95vh;
+
+  .chat-room-update {
+    .chatbox {
+      .chat-pop-out-header {
+        display: block;
+      }
+    }
+  }
+}
+
+.chat-room-update {
+  height: 100%;
+
+  .chatbox {
+    height: 100%;
+    margin-right: 1.5rem;
+    pointer-events: all;
+    width: 448px;
+
+    &:not(.chatbox-minimized) .chat-settings {
+      display: block;
+    }
+  }
+
+  // microphone
+  .chat-settings {
+    background: url("../bootstrap-icons/volume-up-fill.svg") center center / contain no-repeat;
+    background-color: $wallpaper-yellow;
+    background-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    filter: unset;
+    font-size: 10rem;
+    justify-content: center;
+    max-height: 32px;
+    max-width: 32px;
+
+    .tool-box {
+      white-space: nowrap;
+      width: fit-content;
+
+      &::before {
+        content: "Chat Sounds On";
+      }
+    }
+
+    &[data-sound="off"] {
+      background: url("../bootstrap-icons/volume-mute-fill.svg") center center / contain no-repeat;
+      background-color: $wallpaper-yellow;
+      background-size: 20px;
+
+      .tool-box::before {
+        content: "Chat Sounds Off";
+      }
+    }
+  }
+
+  .chat-pop-out-header {
+    background-color: $concrete;
+    border-radius: 8px 8px 0 0;
+    color: $black;
+    cursor: pointer;
+    display: none;
+    font-size: 20px;
+    padding: 2px;
+  }
+
+  .chatbox-body {
+    height: 90%;
+    transition: 0.3s;
+  }
+
+  .chatbox-messages {
+    background-color: $white;
+    font-size: 0.85rem;
+    height: 94%;
+    hyphens: auto;
+    overflow: auto;
+    user-select: text;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+
+    .message-list {
+      min-height: 100%;
+    }
+  }
+
+  li {
+    background-color: $prevail-light-blue;
+    border-radius: 8px;
+    font-size: 14px;
+    margin: 10px;
+    max-width: 70%;
+    padding: 8px; // doing this in the message slim partial would mess up in-session
+    width: fit-content;
+
+    .user-and-time {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .chatbox-user {
+      font-weight: 600;
+    }
+
+    .time-stamp {
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    .edited {
+      color: $mid-gray;
+      font-size: 10px;
+    }
+
+    &.current-user-message {
+      background-color: $concrete;
+      margin-left: auto;
+    }
+
+    .chat-message-buttons {
+      background-color: $white;
+      border-radius: 20px;
+      display: none;
+      height: 22px;
+      right: 0;
+      top: -15px;
+      width: 50px;
+    }
+
+    .message-edit-textarea {
+      background-color: transparent;
+      border: 0;
+      resize: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .chat-edit-submit-button {
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  li:hover {
+    .chat-message-buttons {
+      background-color: $white;
+      border: 1px solid $light-button-border;
+      box-shadow: 0 1px 1px $fourteen-shadow, 0 2px 1px $twelve-shadow, 0 1px 3px $twenty-shadow;
+      display: block;
+      padding-bottom: 1px;
+    }
+
+    .chat-delete-button * {
+      align-items: center;
+      display: flex;
+      height: 12px;
+      justify-content: center;
+      margin-top: 2px;
+      width: 12px;
+    }
+
+    .chat-edit-button * {
+      align-items: center;
+      display: flex;
+      height: 12px;
+      justify-content: center;
+      margin-top: 5px;
+    }
+  }
+
+  .chatbox-message-footer {
+    background-color: $white;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    height: 6%;
+    min-height: 50px;
+    padding: 10px;
+  }
+
+  .chatbox-message-input-and-submit {
+    background-color: $white;
+    border: 1px solid $secondary-text;
+    border-radius: 20px;
+    bottom: 0;
+    right: 0;
+    width: 91%;
+  }
+
+  .chat-form-text-input {
+    background-color: transparent;
+    border: 0;
+    margin-left: 10px;
+    margin-top: 3px;
+    overflow: auto;
+    resize: none;
+    width: 90%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .chat-form-message-submit {
+    background-color: $submit-grey;
+    border-radius: 20px;
+    margin: 2px 3px;
+  }
+
+  .chatbox-button {
+    bottom: 50%;
+    right: 50%;
+  }
+}

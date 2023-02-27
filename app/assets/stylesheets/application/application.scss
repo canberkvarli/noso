@@ -1,0 +1,256 @@
+.application-body,
+.depo-room-body {
+  color: $dark-bg;
+  overflow-y: overlay;
+}
+
+.application-body {
+  background-color: $concrete;
+  padding-top: 4.8rem;
+  width: 100vw;
+
+  .section-body {
+    margin-bottom: 7.5rem;
+    min-height: 90vh;
+  }
+}
+
+.section-body {
+  .alert {
+    bottom: 1rem;
+    font-weight: 400;
+    margin: 1rem 0;
+    max-width: 430px;
+    padding: 0.75rem 2rem;
+    position: fixed;
+    right: 1rem;
+
+    strong {
+      font-weight: 400;
+    }
+
+    .close {
+      float: right;
+      font-size: 1.25rem;
+      font-weight: bold;
+      line-height: 1.1;
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+.error,
+.error-notification {
+  color: $red;
+  font-size: 1rem;
+
+  &:empty {
+    display: none;
+  }
+}
+
+.disable {
+  pointer-events: none; // bootstrap's .disabled lowers opacity
+}
+
+.question-icon::after {
+  background-image: url("../bootstrap-icons/question-circle-fill.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+  padding: 1rem;
+}
+
+.cursor-help {
+  cursor: help;
+  user-select: none;
+}
+
+.mvh-100 {
+  min-height: 100vh;
+}
+
+.mvh-50 {
+  max-height: 50vh;
+}
+
+.link {
+  color: $light-blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.disabled,
+.disabled > * {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.grid-template-reduced {
+  grid-template-rows: 100% !important;
+}
+
+@media (max-width: 1099px) {
+  footer {
+    text-align: center;
+
+    .border-right {
+      border: 0 !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .section-body {
+    padding-top: 0;
+
+    .container {
+      max-width: none;
+    }
+  }
+
+  .card .card-body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .wrapper {
+    padding-top: 60px;
+  }
+}
+
+.link-group-icons {
+  a {
+    color: $dark-button-bg-light;
+    font-size: 15px;
+    margin-right: 5px;
+
+    img {
+      height: 15px;
+    }
+
+    .fa {
+      padding-top: 4px;
+    }
+  }
+}
+
+.card.prevail {
+  color: $black;
+  overflow: hidden;
+  user-select: none;
+}
+
+.btn-group {
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+button {
+  background: transparent;
+}
+
+.cursor-default {
+  cursor: default;
+}
+
+.position-absolute {
+  &.left {
+    left: 0;
+  }
+
+  &.right {
+    right: 0;
+  }
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.bg-third-black {
+  background-color: $third-black !important;
+}
+
+.overflow-y-auto {
+  overflow: hidden auto;
+  overflow-y: overlay;
+}
+
+.modal-min-width {
+  width: calc(435px + 0.85vw);
+}
+
+.line-height {
+  line-height: 1;
+}
+
+body {
+  ul {
+    padding: 0;
+  }
+}
+
+button.dropdown-toggle,
+.btn.dropdown-toggle {
+  &:focus {
+    outline: 0;
+  }
+
+  // remove default caret from bootstrap dropdown menu
+  &.no-caret::before,
+  &.no-caret::after {
+    content: none !important;
+  }
+}
+
+.text-link {
+  color: $prevail-blue-500;
+}
+
+.show-text:empty {
+  pointer-events: none;
+
+  &::after {
+    color: $secondary-text;
+    content: "N/A";
+  }
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $secondary-text;
+  background-clip: padding-box;
+  border: 3px solid transparent;
+  -webkit-border-radius: 1ex;
+  border-radius: 1ex;
+}
+
+.new-badge::before {
+  background-color: $prevail-blue-20;
+  border-radius: 4px;
+  color: $prevail-blue-400;
+  content: "New";
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0 2px;
+}
+
+.remote-sessions-body {
+  #mobile-detection {
+    background-color: transparentize($black, 0.2);
+
+    .modal-dialog {
+      inset: 0 0 110px 0;
+    }
+  }
+}
+
+[data-bs-tooltip="true"] {
+  cursor: pointer;
+}
